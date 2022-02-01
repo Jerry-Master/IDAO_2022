@@ -1,4 +1,4 @@
-# IDAO_2022
+# IDAO 2022
 
 ## Visualization
 
