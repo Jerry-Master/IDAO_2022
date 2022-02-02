@@ -1,0 +1,9 @@
+numpy
+pandas
+tensorflow
+pymatgen
+ase
+megnet
+matplotlib
+sklearn
+nglview
