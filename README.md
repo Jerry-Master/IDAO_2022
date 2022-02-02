@@ -10,7 +10,7 @@ You can download the `embed.html` file in the Visualization folder to play with 
 
 ## Environment
 
-There are installed the following packages, and all of their dependencies:
+The environment should have the following packages:
 
 * Numpy, Pandas, MatPlotLib, sklearn: The typical packages for data science.
 * Tensorflow (CPU): The package for neural network.
@@ -19,7 +19,7 @@ There are installed the following packages, and all of their dependencies:
 * PyMatGen: The package used for loading the crystal structures.
 * Keras Graph Neural Network: The library for creating graphs. More info below.
 
-The python version is 3.9.
+And the python version should be 3.9. In order to accomplish that a new environment can be created with `python3 -m venv crystal` and then by doing `pip3 install -r requirements.txt` the environment is set. You can also do it with `conda` and `virtualenv`. That is just how I did it.
 
 In order to use the kernel inside jupyter you may have to install `ipykernel` for the environment. [Here](https://stackoverflow.com/questions/51934528/failed-to-start-the-kernel-on-jupyter-notebook) you can find how to do it. Or you can simply do `pip3 install ipykernel`. Also, in order to use nglview you may need to activate the related widget. It should suffice to do:
 
