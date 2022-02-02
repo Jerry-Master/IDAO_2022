@@ -19,7 +19,7 @@ There are installed the following packages, and all of their dependencies:
 * PyMatGen: The package used for loading the crystal structures.
 * Keras Graph Neural Network: The library for creating graphs. More info below.
 
-The environment can be found [here](https://drive.google.com/file/d/1VUor5LgiDiuoGUrzepxzoM-iNiv9llRb/view?usp=sharing). The python version is 3.9.
+The python version is 3.9.
 
 In order to use the kernel inside jupyter you may have to install `ipykernel` for the environment. [Here](https://stackoverflow.com/questions/51934528/failed-to-start-the-kernel-on-jupyter-notebook) you can find how to do it. Or you can simply do `pip3 install ipykernel`. Also, in order to use nglview you may need to activate the related widget. It should suffice to do:
 
