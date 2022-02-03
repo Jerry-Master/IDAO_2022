@@ -48,12 +48,12 @@ The library from tensorflow and keras should be included in the crystal package 
 
 Several Graphs models have their [implementation](https://github.com/aimat-lab/gcnn_keras/tree/master/kgcnn/literature) in the [GitHub of the keras graph library](https://github.com/aimat-lab/gcnn_keras). Including another implementation of megnet which is the one we were given as baseline.
 
-## Convolutional
+### Convolutional
 
 A brief introduction to GCN can be found [here](https://towardsdatascience.com/understanding-graph-convolutional-networks-for-node-classification-a2bfdb7aba7b). The main takeaway from the article is how they normalize the adjacency matrix of the graph so that it can be used as a weight matrix. That concept is later used in the article explaining recurrent networks. 
 
 If you want to dive into more details [here](https://github.com/Jerry-Master/IDAO_2022/blob/main/Papers/Convolutional%20GNN.pdf) is a paper explaining how they work and how they are related to the CNNs we all know. The article is more technical than the webpage. By looking at the formulas one can see the similarities between CNNs and GCNs. The key is to express the convolution as an operator including a time-invariant or shift operation. In 2D images it is a scalar product between filter and part of the image. Here is a scalar product between filter and the features of some nodes, weighted by some matrix resembling the adjacency matrix. 
 
-## Recursive
+### Recursive
 
-The concept of Recurrent Graph Neural Network is well explained [in this arxiv-vanity page](https://www.arxiv-vanity.com/papers/1904.08035/). The update formulas for vanilla RNN, LSTM and GRU are presented to give background into the concept of recurrent networks. The paper also states that the use of recurrent units prevents overfitting better than residual connections and provides better results for deeper models.
+The concept of Recurrent Graph Neural Network is well explained [in this arxiv-vanity page](https://www.arxiv-vanity.com/papers/1904.08035/). The update formulas for vanilla RNN, LSTM and GRU are presented to give background into the concept of recurrent networks. However, some formulas are badly parsed there, if some formula seems wrong check it [here](https://github.com/Jerry-Master/IDAO_2022/blob/main/Papers/Recurrent%20GNN%20(vs%20residual).pdf), for instance, formula (14) and (20) are wrongly written in the arxiv-vanity but are well written in the arxiv paper. The article also states that the use of recurrent units prevents overfitting better than residual connections and provides better results for deeper models.
