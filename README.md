@@ -1,5 +1,22 @@
 # IDAO 2022
 
+## Input
+
+The data is given as JSON that can be converted into a PyMatGen Structure object. It can also be converted to dictionary. The main variables are presented here:
+
+* Charge: It is the overall charge of the crystal, normally 0.
+* Lattice: It defines a reference system for the crystal and is defined by 3 lattice vectors. Apart from that its internal parameters are:
+  * Matrix: An array with the 3 vectors defined by 3 coordinates each.
+  * a, b, c: The length of each vector respectively.
+  * alpha, beta, gamma: The angles between the vectors. This information is redundant but is provided nonetheless.
+  * volume: The volume, not much to add here.
+* Sites: A list with all the atoms inside the crystal. Each atom is defined by these properties:
+  * species: It contains two pieces of information: the element, and the occupation, i.e.: the probability to find the atom there.
+  * abc: Fractional coordinates with respect to the unit cell which is the lattice.
+  * xyz: Cartesian coordinates
+  * label: The element again.
+  * properties: Additional properties, normally void.
+
 ## Visualization
 
 Here is presented the structures of one of the crystals. As you can see it is a perfect lattice except for some imperfections. It can have an atom missing of some atom is changed, in this case one atom has changed.
