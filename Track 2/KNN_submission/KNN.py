@@ -10,7 +10,7 @@ targets = pd.read_csv(filepath_train + 'targets.csv', index_col=0)
 targets.sort_index(inplace=True)
 
 dist_path = './'
-train_matrix = pd.read_csv(dist_path + 'Train_distance_matrix.csv', index_col=0)
+# train_matrix = pd.read_csv(dist_path + 'Train_distance_matrix.csv', index_col=0)
 test_matrix = pd.read_csv(dist_path + 'Test_distance_matrix.csv', index_col=0)
 print(test_matrix.shape)
 
