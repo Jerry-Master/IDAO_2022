@@ -1,10 +1,8 @@
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import os
 
-filepath_train = './data/dichalcogenides_public'
-filepath_test = './data/dichalcogenides_private'
+filepath_train = './data/dichalcogenides_public/'
+filepath_test = './data/dichalcogenides_private/'
 
 targets = pd.read_csv(filepath_train + 'targets.csv', index_col=0)
 targets.sort_index(inplace=True)
