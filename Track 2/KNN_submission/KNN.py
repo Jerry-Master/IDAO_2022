@@ -12,6 +12,7 @@ targets.sort_index(inplace=True)
 dist_path = './'
 train_matrix = pd.read_csv(dist_path + 'Train_distance_matrix.csv', index_col=0)
 test_matrix = pd.read_csv(dist_path + 'Test_distance_matrix.csv', index_col=0)
+print(test_matrix.shape)
 
 predict = []
 k = 100
