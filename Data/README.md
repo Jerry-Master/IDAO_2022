@@ -34,3 +34,6 @@ The other CSV has similar information as the folders, but are condensed in one s
 * coordinates_train.csv: This file has a dataframe with the coordinates of each defect in the crystal for each crystal. Due to a problem in conversion, the data is as a `string` and not as `np.array` or a `list`.
 * coordinates_train_angles.csv: Since each crystal has 3 vertices, that represents a triangle, which has 3 angles. Therefore, it can be represented as 3 coordinates in angles which add up to 180 degrees. This files contains those coordinates in radians.
 
+## Kaggle
+
+The relevant data can also be found in Kaggle [here](https://www.kaggle.com/josepc/idao-2022), available to use with their kernels. There are several notebooks which can serve as a guide to use the data.
