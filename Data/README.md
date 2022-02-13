@@ -20,6 +20,10 @@ In order to apply K-nearest neighbour or to do some kind of multidimensional sca
 
 Another remarkable feature of the crystal is more than 90% of the crystals has exactly 3 imperfections. That creates the possibility to reduce even more the dataset. Because now there is a bijection between each crystal and 3 points in space. Which means that the problem is effectively one of classifying triangles. In the folder coordinates are the coordinates of each crystal defect in npy format.
 
+## Fractional coordinates
+
+Instead of representing the data as a 8 by 8 grid, we can also use the coordinates that are given by the structure itself. However, instead of using the cartesian coordinates, there are the fractional coordinates which are relative to the grid vectors. We can view this coordinates as normalised. 
+
 ## CSV
 
 Right now there are 4 CSV. One given by the organization: targets.csv. And three created by us. The one given are the targets that we need to predict for the public dataset. They are values of the band gap of each crystal. We made an interesting analysis of the target reaching the conclusion that there are three main types of crystals, and within group, little variations are what make the difference in the band gap. This is the target histogram:
@@ -31,8 +35,9 @@ Each bin is separated from other in at least 0.02 eV, which means that for the m
 The other CSV has similar information as the folders, but are condensed in one single file:
 
 * {Train, Test}\_distance\_matrix.csv: As the name says, these are the distance matrices between train and train, and between test and train.
-* coordinates_train.csv: This file has a dataframe with the coordinates of each defect in the crystal for each crystal. Due to a problem in conversion, the data is as a `string` and not as `np.array` or a `list`.
-* coordinates_train_angles.csv: Since each crystal has 3 vertices, that represents a triangle, which has 3 angles. Therefore, it can be represented as 3 coordinates in angles which add up to 180 degrees. This files contains those coordinates in radians.
+* coordinates_{train,test}.csv: This file has a dataframe with the coordinates of each defect in the crystal for each crystal. Due to a problem in conversion, the data is as a `string` and not as `np.array` or a `list`.
+* coordinates\_{train,test}\_angles.csv: Since each crystal has 3 vertices, that represents a triangle, which has 3 angles. Therefore, it can be represented as 3 coordinates in angles which add up to 180 degrees. This files contains those coordinates in radians.
+* frac\_coordinates\_{train,test}\_angles.csv: Same as the coordinates file but with the fractional coordinates.
 
 ## Kaggle
 
