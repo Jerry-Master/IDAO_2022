@@ -1,0 +1,27 @@
+FROM nvcr.io/nvidia/pytorch:21.06-py3
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && \
+      apt-get -y install sudo
+
+
+RUN :\
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* \
+    && :
+    
+RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
+
+USER docker
+CMD /bin/bash
+
+RUN echo "export PATH=$HOME/.local/bin:$PATH" >> $HOME/.bashrc
+
+SHELL ["/bin/bash", "--login", "-c"]
+
+WORKDIR /home/docker
+
+COPY ./ /home/docker/
+
+RUN pip install -r requirements.txt
